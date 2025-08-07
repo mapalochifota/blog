@@ -9,27 +9,35 @@
           style="object-fit: cover" src="@/assets/nike-icon.png" />
       </div>
       <div class="flex flex-row gap-[30px] items-center justify-end self-stretch flex-1 relative">
-        <div
-          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden">
+        <!-- Firm Ground Button -->
+        <router-link 
+          to="/firmground"
+          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden hover:bg-[#03496e] transition-colors">
           <div
             class="text-[#ffffff] text-left font-['PlayfairDisplay-Bold',_sans-serif] text-xl font-bold relative self-stretch">
             FIRM GROUND
           </div>
-        </div>
-        <div
-          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden">
+        </router-link>
+        
+        <!-- Artificial Turf Button -->
+        <router-link 
+          to="/artificialturf"
+          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden hover:bg-[#03496e] transition-colors">
           <div
             class="text-[#ffffff] text-left font-['PlayfairDisplay-Bold',_sans-serif] text-xl font-bold relative self-stretch">
             ARTIFICIAL TURF
           </div>
-        </div>
-        <div
-          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden">
+        </router-link>
+        
+        <!-- About Button -->
+        <router-link 
+          to="/about"
+          class="rounded-[20px] p-5 flex flex-col gap-2.5 items-center justify-center self-stretch shrink-0 relative overflow-hidden hover:bg-[#03496e] transition-colors">
           <div
             class="text-[#ffffff] text-left font-['PlayfairDisplay-Bold',_sans-serif] text-xl font-bold relative self-stretch">
             ABOUT
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <!-- Main Content -->
@@ -94,14 +102,17 @@
           </div>
         </div>
         <!-- learn more -->
-        <button
+        <button>
+          <router-link 
+          to="Tiempo"
           class="bg-[#03628e] rounded-[5px] pt-2.5 pr-[30px] pb-2.5 pl-[30px] flex flex-col gap-2.5 items-start justify-start 
           shrink-0 relative overflow-hidden
            bg-blue-500 hover:bg-blue-700 focus:ring-white-600">
-          <div
+          <span
             class="text-[#ffffff] text-center font-['PlayfairDisplay-Medium',_sans-serif] text-2xl font-medium relative">
             Learn More
-          </div>
+          </span>
+          </router-link>
         </button>
       </div>
     </div>
@@ -122,4 +133,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+/* Add hover animation for navigation buttons */
+.router-link-active {
+  background-color: #03496e;
+}
+
+.router-link-exact-active {
+  background-color: #03496e;
+}
+</style>

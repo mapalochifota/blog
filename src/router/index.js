@@ -3,6 +3,8 @@ import HomeView from '../views/Home.vue'
 import GX2view from'../views/GX2.vue'
 import Teimpoview from '../views/Tiempo.vue'
 import vaporview from '../views/vapor.vue'
+import aboutview from ' ../views/about.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +28,11 @@ const router = createRouter({
       path: '/vapor',
       name: 'vapor',
       component: vaporview,
+    },
+    {
+      path: '/About',
+      name: 'about',
+      component: Aboutview,
     }
   ],
 })

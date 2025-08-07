@@ -13,33 +13,45 @@
     <div
       class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-start justify-center flex-1 relative overflow-hidden"
     >
-      <div
-        class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-start justify-start flex-1 relative overflow-hidden"
-      >
-        <div
-          class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative flex-1"
+      <!-- Firm Ground Button -->
+      <button class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-center justify-center flex-1 relative overflow-hidden bg-transparent hover:bg-[#03496e] transition-colors">
+        <router-link
+          to="/firmground"
+          class="w-full h-full flex items-center justify-center"
         >
-          Firm Ground
-        </div>
-      </div>
-      <div
-        class="rounded-[30px] p-2.5 flex flex-col gap-2.5 items-center justify-start flex-1 relative overflow-hidden"
-      >
-        <div
-          class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative"
+          <div class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative">
+            Firm Ground
+          </div>
+        </router-link>
+      </button>
+      
+      <!-- Artificial Turf Button -->
+      <button class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-center justify-center flex-1 relative overflow-hidden bg-transparent hover:bg-[#03496e] transition-colors">
+        <router-link
+          to="/artificialturf"
+          class="w-full h-full flex items-center justify-center"
         >
-          Artificial Tuff
-        </div>
-      </div>
-      <div
-        class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-start justify-center flex-1 relative overflow-hidden"
-      >
-        <div
-          class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative"
+          <div
+            class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative"
+          >
+            Artificial Turf
+          </div>
+        </router-link>
+      </button>
+      
+      <!-- About Button -->
+      <button class="rounded-[30px] p-2.5 flex flex-row gap-2.5 items-center justify-center flex-1 relative overflow-hidden bg-transparent hover:bg-[#03496e] transition-colors">
+        <router-link
+          to="/about"
+          class="w-full h-full flex items-center justify-center"
         >
-          About
-        </div>
-      </div>
+          <div
+            class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-2xl font-normal relative"
+          >
+            About
+          </div>
+        </router-link>
+      </button>
     </div>
   </div>
   <div
@@ -73,29 +85,28 @@
         <div
           class="text-[#000000] text-center font-['Inter-Regular',_sans-serif] text-[32px] font-normal relative flex-1 h-[639px]"
         >
-          The Nike Tiempo is a classic football boot blending premium
-          leather with modern tech for superior touch and control. Loved by
-          playmakers like Luka Modrić, it features a hybrid stud pattern for
-          agility, Quadfit mesh for a snug fit, and cushioned padding for
-          comfort. Designed using biomechanics research, it supports quick turns
-          and precise passing, making it ideal for midfielders and defenders who
-          value elegance and reliability on the pitch.
+          The Nike Tiempo is a classic football boot blending premium leather with modern tech for superior touch and control. Loved by playmakers like Luka Modrić, it features a hybrid stud pattern for agility, Quadfit mesh for a snug fit, and cushioned padding for comfort. Designed using biomechanics research, it supports quick turns and precise passing, making it ideal for midfielders and defenders who value elegance and reliability on the pitch.
           <br />
         </div>
       </div>
-      <div
-        class="bg-[#03628e] rounded-[30px] p-2.5 flex flex-row gap-2.5 items-start justify-center shrink-0 w-[295px] relative overflow-hidden"
-      >
-        <div
-          class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-[32px] font-normal relative"
+      <!-- next button -->
+      <button>
+        <router-link
+          to="/GX2"
+          class="bg-[#03628e] rounded-[30px] p-2.5 flex flex-row gap-2.5 items-start justify-center shrink-0 w-[295px] relative overflow-hidden hover:bg-blue-400 focus:ring-white-600"
         >
-          Next
-        </div>
-      </div>
+          <div
+            class="text-[#ffffff] text-center font-['Inter-Regular',_sans-serif] text-[32px] font-normal relative"
+          >
+            Next
+          </div>
+        </router-link>
+      </button>
     </div>
   </div>
 </div>
 </template>
+
 <script>
 export default {
   name: 'Tiempo',
@@ -109,6 +120,19 @@ export default {
   }
 };
 </script>
-<style scoped>
 
+<style scoped>
+/* Add hover animation for navigation buttons */
+button:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+.router-link-active {
+  background-color: #03496e;
+}
+
+.router-link-exact-active {
+  background-color: #03496e;
+}
 </style>
